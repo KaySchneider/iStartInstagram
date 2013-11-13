@@ -26,25 +26,25 @@
       <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="504">
+            <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="504">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instagram.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="instagram.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/instagram.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="11" selection-start="577" selection-end="577" vertical-scroll-proportion="0.14516129" vertical-offset="216" max-vertical-offset="7686">
+            <state line="282" column="0" selection-start="10970" selection-end="10970" vertical-scroll-proportion="0.0" vertical-offset="5531" max-vertical-offset="6426">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="background.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="background.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="54" selection-start="2098" selection-end="2107" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1440">
+            <state line="18" column="2" selection-start="538" selection-end="538" vertical-scroll-proportion="0.3171806" vertical-offset="0" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="messages.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_locales/en_US/messages.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="0" selection-end="850" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="558">
+            <state line="19" column="4" selection-start="0" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="messages.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_locales/en/messages.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="37" selection-start="725" selection-end="725" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="558">
+            <state line="14" column="37" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="messages.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_locales/de/messages.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="47" selection-start="255" selection-end="255" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="558">
+            <state line="6" column="47" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
       <file leaf-file-name="instaWidget.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/instaWidget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="77" selection-start="181" selection-end="181" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="396">
+            <state line="4" column="77" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
@@ -101,8 +101,8 @@
         <option value="$PROJECT_DIR$/_locales/de/messages.json" />
         <option value="$PROJECT_DIR$/widget.json" />
         <option value="$PROJECT_DIR$/manifest.json" />
-        <option value="$PROJECT_DIR$/js/background.js" />
         <option value="$PROJECT_DIR$/js/instagram.js" />
+        <option value="$PROJECT_DIR$/js/background.js" />
       </list>
     </option>
   </component>
@@ -138,6 +138,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -240,27 +241,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="PublishConfig" serverName="mopidy" serverId="b32206df-24b7-4068-b5ca-d78dbe2def32">
-    <servers>
-      <server id="b32206df-24b7-4068-b5ca-d78dbe2def32">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </server>
-    </servers>
-  </component>
+  <component name="PublishConfig" serverName="mopidy" serverId="b32206df-24b7-4068-b5ca-d78dbe2def32" />
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -270,14 +260,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -286,6 +268,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -314,23 +304,23 @@
     <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16974169" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17182498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -347,28 +337,77 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="504">
+        <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/instagram.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="11" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="7686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="54" selection-start="2098" selection-end="2107" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_locales/en_US/messages.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="4" selection-start="0" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_locales/en/messages.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="37" selection-start="725" selection-end="725" vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="558">
+        <state line="14" column="37" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_locales/de/messages.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="47" selection-start="255" selection-end="255" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="558">
+        <state line="6" column="47" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/instaWidget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="77" selection-start="181" selection-end="181" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="396">
+        <state line="4" column="77" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="40" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_locales/en/messages.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="37" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_locales/de/messages.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="47" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/instaWidget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="77" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="396">
           <folding />
         </state>
       </provider>
@@ -382,21 +421,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_locales/en_US/messages.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="0" selection-end="850" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="54" selection-start="2098" selection-end="2107" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1440">
+        <state line="19" column="4" selection-start="0" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/instagram.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="11" selection-start="577" selection-end="577" vertical-scroll-proportion="0.14516129" vertical-offset="216" max-vertical-offset="7686">
+        <state line="282" column="0" selection-start="10970" selection-end="10970" vertical-scroll-proportion="0.0" vertical-offset="5531" max-vertical-offset="6426">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="2" selection-start="538" selection-end="538" vertical-scroll-proportion="0.3171806" vertical-offset="0" max-vertical-offset="2142">
           <folding />
         </state>
       </provider>

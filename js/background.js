@@ -32,6 +32,34 @@ var widgetConfig = {
     "extensionid":chrome.i18n.getMessage("@@extension_id")
 };
 
+/**
+ * this is not an full client API only an short snippet to launch an link in the browser
+ * with the knowledge of iStart application!
+ * @type {{tabid: number, extensionUrl: *, launchlink: Function}}
+ */
+var istartliveTileApi = {
+    tabid : 0,
+    extensionUrl: chrome.extension.getURL('html/instaWidget.html'),
+    launchlink: function (data) {
+        chrome.runtime.sendMessage(iStartId,{cmd: "launchlink",url:this.extensionUrl,launchlink:data.link,tabId:data.tabid}, function(response) {
+            //filter the message direct here
+            if(response.url !== extensionUrl) {
+                return false;
+            }
+            if(response.response==='ok') {
+                console.log('everything is fine');
+            } else {
+                console.log("wahuu...something is gone wrong");
+            }
+        });
+    }
+};
+
+/**
+ * load an external image as blob
+ * @param uri
+ * @param callback
+ */
 var loadImage = function(uri, callback) {
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'blob';
@@ -42,6 +70,11 @@ var loadImage = function(uri, callback) {
     xhr.send();
 }
 
+/**
+ * call the instagram api with json
+ * @param uri
+ * @param callback
+ */
 var loadInstagram = function(uri, callback) {
     var xhr = new XMLHttpRequest();
     var response = callback;
@@ -55,23 +88,29 @@ var loadInstagram = function(uri, callback) {
 }
 
 
+/**
+ * add event listener for the communication with iStart
+ * reject all messages from other extensions
+ */
 chrome.runtime.onMessageExternal.addListener(
     function(request, sender, sendResponse) {
-        //inject later here the live id for iStart
-        console.log(request,sender);
-        //sendResponse({widget:true, config:widgetConfig});
+
         if (sender.id !== iStartId )
             return;  // don't allow other extensions to connect
 
         if(request.cmd === 'clicktile') {
-            //send the message to the frontend script!
-
-            chrome.runtime.sendMessage({cmd:'clicktile'}, function(data) {
-                console.log(data);
+            //send the message to the frontend script! and ask for the link of the current shown up image
+            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                //send it to the actual shown tab into the frontend script. So we dont send it to another tab and became an wrong link
+                chrome.tabs.sendMessage(tabs[0].id, {cmd: "clicktile"}, function(response) {
+                    if(response.link) {
+                        //launch the link via istart api
+                        istartliveTileApi.launchlink({"link":response.link,"tabid": tabs[0].id});
+                    }
+                });
             });
-
         } else {
-            console.log(request,sender);
+            //all other request from istart becomes the widget configurateion object back
             sendResponse({widget:true, config:widgetConfig});
         }
 });

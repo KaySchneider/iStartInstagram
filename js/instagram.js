@@ -1,33 +1,21 @@
 var PLACEHOLDER_IMAGE = "loading.gif";
 var WU_API_KEY = "8f3dbc28c93f3c7d";//api key from weatherunderground.com
 var instagramClientId = "4a9e066d519149f28a325d95de4c6429";
-/**
- * we use this code base for two applications and check wich application
- * will perform much better.
- * One "instaWeather"
- * Weather "live" backgrounds from instagramm if the user is online
- *
- * retro "Weather"
- * Weather app in retro Design
- *
- * digital "Weather"
- * Weather in digital nativ design!
- *
- * "pirate" "Weather"
- * Weather in pirate Mode!!
- * --> With arrrs and rooos
- *
- * "social pirate" weather
- * --> share your weather automatically every day one time you watch the weather!
- */
+var scrollspeed = 5000;
+
 var instagramm_active = true;
 
+/**
+ * event listener for the communication with the backend script
+ * for detailed documentation about message passing in google chrome API:
+ * http://developer.chrome.com/extensions/messaging.html
+ */
 chrome.runtime.onMessage.addListener(
     function(request,sender,response) {
-        console.log(window.scrollPos,window, "HERE");
         if(request.cmd === 'clicktile') {
-            response({data:[window.scrollPos,window]});
-            //console.log(window.scrollPos,window);
+            //send an object with an link attribute to the backend script as answer
+            //TODO: implement an offline detection maybe direct in the backend script!
+            response({link:window.imageBg[window.scrollPos-1].all.link});
         }
     }
 );
@@ -35,49 +23,19 @@ chrome.runtime.onMessage.addListener(
  * include here the thirdparty api for communication with the istart API
  * @type {{tabid: number, extensionUrl: *, launchlink: Function}}
  */
-var istartliveTileApi = {
-    tabid : 0,
-    extensionUrl: chrome.extension.getURL('html/instaWidget.html'),
-    launchlink: function (data) {
-        chrome.runtime.sendMessage({cmd: "launchlink",url:this.extensionUrl,launchlink:data.getAttribute('linkto'),tabId:this.tabId}, function(response) {
-            //filter the message direct here
-            if(response.url !== extensionUrl) {
-                return false;
-            }
-            if(response.response==='ok') {
-                console.log('everything is fine');
-            } else {
-                console.log("wahuu...something is gone wrong");
-            }
-        });
-    }
-};
-
-//receive the loaders tab id
-//chrome.tabs.getCurrent(function(item)  {
-  //  istartliveTileApi.tabid = item.id;
-//})
 
 var loadInstagram = function(path,callback) {
-
     chrome.runtime.sendMessage({cmd:'get',url:path},function(response) {
         console.log(response);
         callback(response);
-    })
-}
+    });
+};
 
 var loadImage = function(uri, callback) {
     chrome.runtime.sendMessage({cmd:'loadImage',uri:uri},function(response) {
         console.log(response);
         callback(response);
     })
-   /* var xhr = new XMLHttpRequest();
-    xhr.responseType = 'blob';
-    xhr.onload = function() {
-        callback(window.URL.createObjectURL(xhr.response), uri);
-    }
-    xhr.open('GET', uri, true);
-    xhr.send();*/
 }
 
 var defaults = {
@@ -122,18 +80,7 @@ angular.module('myApp', ['ngRoute'])
                         console.log(data);
                         d.resolve({'blob':data.blob,'all':allData});
                     });
-                    /*$http({
-                        method: 'GET',
-                        url: uri,
-                        responseType: 'blob',
-                        cache: true
-                    }).success(function(data) {
-                            var image = window.URL.createObjectURL(data);
 
-                            d.resolve({'blob':image,'all':allData});
-                        }).error(function(err) {
-                            d.reject(err);
-                        });*/
                     return d.promise;
 
                 }
@@ -199,21 +146,10 @@ angular.module('myApp', ['ngRoute'])
 
                         scope.resolve(dataObject.data);
                     })
-
-                    /*
-                    var d = $q.defer();
-                    $http({
-                        method: 'GET',
-                        //url: self.getUrl('mediaSearch',latLng),
-                        url: self.getUrl('topImages', {tag:'Leonberg'}),
-                        cache: true
-                    }).success(function(data) {
-                            d.resolve(data.data);
-                            //console.log(data,this,self);
-                            //this.getImagesForLocId(data.data[0].id)
-                        }).error(function(err) {
-                            d.reject(err);
-                        });*/
+                    /**
+                     * moved calling the instagram API to the backend script because the widget in the iframe
+                     * cant call the instagram API in content restriction from the main chrome App
+                     */
                     return d.promise;
                 },
                 getImagesForLocId: function(locid) {
@@ -276,23 +212,26 @@ angular.module('myApp', ['ngRoute'])
             $scope.showImage = 0;
             $scope.bgImageCount = 0;
             $scope.scrollPos = 0;
+            $window.scrollPos = $scope.scrollPos;
+            $scope.imageBg = [];
+            $window.imageBg = $scope.imageBg;
+
+            $scope.$watch('scrollPos', function() {
+                $window.scrollPos = $scope.scrollPos;
+            });
+            $scope.$watch('imageBg', function() {
+                $window.imageBg = $scope.imageBg;
+            });
             $scope.direction ='right';
 
             $scope.click = function() {
 
               var direction = $scope.direction;
                 switch(direction) {
-
-                    case 'up':
-
-                        break;
-                    case 'down':
-
-                        break;
                     case 'left':
                         if($scope.scrollPos == 0) {
                             $scope.direction = 'right';
-                            $timeout($scope.click, 2000);
+                            $timeout($scope.click, scrollspeed);
                             return false;
                         }
                         var stripe = document.getElementById('imagestrip');
@@ -306,7 +245,7 @@ angular.module('myApp', ['ngRoute'])
                     case 'right':
                         if($scope.scrollPos === $scope.bgImageCount) {
                             $scope.direction = 'left';
-                            $timeout($scope.click, 2000);
+                            $timeout($scope.click, scrollspeed);
                             return false;
                         }
                         var stripe = document.getElementById('imagestrip');
@@ -316,14 +255,15 @@ angular.module('myApp', ['ngRoute'])
                         } else
                             stripe.style.top = num - 100 + "%";
                         $scope.scrollPos++;
+
                         break;
                 }
-                $timeout($scope.click, 2000);
+                $timeout($scope.click, scrollspeed);
             }
 
-            //get the locales for displaying the date
+
 ;
-            $scope.imageBg = [];
+
 
             /**
              * TODO: implement an service and an directive for the view to inject here some picture
@@ -332,9 +272,6 @@ angular.module('myApp', ['ngRoute'])
             var InstagrammPictures = function() {
                 Instagram.getImagesForLatLong()
                     .then(function(data) {
-                        // for(var i in data) {
-                        // Instagram.getImagesForLocId(data[i].id)
-                        //    .then(function(data) {
                         $scope.bgImageCount = data.length;
                         $scope.click();
                         for(item in data) {
@@ -343,16 +280,9 @@ angular.module('myApp', ['ngRoute'])
                                     $scope.imageBg.push(  {'blob':imageBlob.blob,'all':imageBlob.all} );
                                 });
                         }
-
-                        // });
-                        // }
-
                     });
             };
-
             InstagrammPictures();
-            //check the offline cache at first
-
 
         }])
 
