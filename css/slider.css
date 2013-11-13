@@ -1,0 +1,24 @@
+@keyframes slidy {
+    20% { left: 0%; }
+    25% { top: -100%; }
+    45% { top: -100%; }
+    50% { top: -200%; }
+    70% { top: -200%; }
+    75% { top: -300%; }
+    95% { top: -300%; }
+    100% { top: -400%; }
+}
+div#slider { overflow: hidden; }
+
+figure#imagestrip  {
+    position: relative;
+    height: 500%;
+    width: 100%!important;
+
+    margin: 0;
+    left: 0;
+    top:0;
+    font-size: 0;
+    -webkit-transition: all 3s ease;
+}
+

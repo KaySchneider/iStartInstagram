@@ -1,0 +1,22 @@
+{
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "version": "0.0.1.6",
+    "manifest_version": 2,
+    "default_locale": "en_US",
+    "offline_enabled": true,
+    "permissions": [
+    "<all_urls>"
+    ],
+    "icons": {
+        "128": "istartIcon.png",
+        "16":"istartIcon16.png"
+    },
+
+    "background": {
+        "persistent": false,
+        "scripts": ["js/background.js"]
+    },
+    "web_accessible_resources": [ "html/instaWidget.html"],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://dropbox.com https://pagead2.googlesyndication.com; object-src 'self'"
+}

@@ -1,0 +1,25 @@
+{
+    "appName": {
+        "message": "Instagram top pictures live tile for  [iStart new tab page]",
+        "description": "The title of the application, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "With Instagram top pictures you can view the latest top pictures on instagram. This item is open source and build with the super hero angular.js framework and the power of HTML5",
+        "description":"The description of the application, displayed in the web store."
+    },
+    "permissions": {
+        "message": "This widget needs additional permissions to access  $perms$",
+        "placeholders": {
+            "perms": {
+                "content": "$1",
+                "example": "all_urls"
+            }
+        }
+    },
+    "askmenowforpermissions": {
+        "message": "ask me now for permissions"
+    },
+    "close": {
+        "message": "close"
+    }
+}

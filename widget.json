@@ -1,0 +1,13 @@
+{
+    "name": "InstagramTopPictures",
+    "description":"live tile with instagram top pictures",
+    "iswidget":true,
+    "permissions":["tabs"],//additional permissions to ask for or to check for before inject into the DOM
+    "fullscreen":chrome.extension.getURL(this.widgetPath + '/instagram/html/fullscreen.html'),
+    "src":  chrome.extension.getURL(this.widgetPath + "instagram/html/instaWidget.html"),
+    "sendClick": true,
+    "multiple":true, //can be added more than one time into the browser
+    "min_width":2,
+    "min_height":2,
+    "extensionid":chrome.i18n.getMessage("@@extension_id")
+}
